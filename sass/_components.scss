@@ -1,0 +1,141 @@
+.cover {
+    background-image: url(../images/hero-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main {
+    &__pre {
+        flex-basis: 11vw;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 40vw;
+
+        &--logobox {
+            display: flex;
+            align-items: center;
+            height: 20vh;
+        }
+
+        &--header {
+            height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &-title {
+                font-size: 4.9rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 0.65rem;
+
+                &-pre {
+                    font-weight: 300;
+                    letter-spacing: 0.75rem;
+                    color: var(--color-soft-red);
+                }
+            }
+
+            &-caption {
+                width: 85%;
+                font-size: 1.18rem;
+                line-height: 1.7rem;
+                color: var(--color-soft-red);
+            }
+        }
+
+        &--input {
+
+            &-cta {
+                position: relative;
+            }
+        }
+
+        &--footer {
+            display: flex;
+            min-height: 10vh;
+            align-items: flex-end;
+            padding-bottom: 1.15rem;
+
+            .attribution {
+                font-size: .7rem;
+                text-align: center;
+            }
+
+            .attribution a {
+                text-decoration: none;
+                color: hsl(228, 45%, 44%);
+            }
+        }
+    }
+
+    &__post {
+        flex-basis: 14vw;
+    }
+}
+
+.input-box {
+    width: 65%;
+    padding: 0.958rem;
+    border-radius: 6.25rem;
+    border: 1px solid var(--color-deep-red);
+    outline: none;
+
+    &::placeholder {
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--color-deep-red);
+        opacity: 0.6;
+        font-size: 1rem;
+    }
+
+    &:focus {
+        border: 1.8px solid var(--color-soft-red);
+
+        &:invalid {
+            background-image: url(../images/icon-error.svg);
+            background-repeat: no-repeat;
+            background-position: 73.5%;
+        }
+    }
+
+}
+
+.btn-inline {
+    padding: 0.79rem;
+    width: 16%;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    border-radius: 6.25rem;
+    border: none;
+    outline: none;
+    background: var(--gradient-2);
+
+    &::before {
+        content: url(../images/icon-arrow.svg);
+    }
+
+    &:hover {
+        box-shadow: -2px 15px 20px var(--color-deep-red);
+        transform: translate(.2rem);
+        transition: all 0.3s ease 0s;
+    }
+
+}
+
+.requirements {
+    color: var(--color-soft-red);
+    font-size: .9rem;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    transition: all .3s;
+}
+
+.input-box:placeholder-shown~.requirements {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
