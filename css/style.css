@@ -20,26 +20,48 @@ html {
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-image: var(--gradient-1); }
+  background-image: var(--gradient-1);
+  overflow-x: hidden; }
 
 .container {
   display: flex;
-  height: 100vh; }
+  min-height: 100vh; }
+  @media only screen and (max-width: 800px) {
+    .container {
+      flex-direction: column-reverse; } }
 
 .cover {
-  flex-basis: 35vw; }
+  flex-basis: 38vw; }
+  @media only screen and (max-width: 800px) {
+    .cover {
+      position: absolute;
+      width: 100vw;
+      top: 9rem;
+      flex-basis: auto;
+      height: 20rem; } }
 
 .main {
   display: flex;
   flex-basis: 65vw; }
+  @media only screen and (max-width: 800px) {
+    .main {
+      flex-direction: column; } }
 
 .cover {
   background-image: url(../images/hero-desktop.jpg);
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 800px) {
+    .cover {
+      background-position: top;
+      background-position-y: -3rem; } }
 
 .main__pre {
   flex-basis: 11vw; }
+  @media only screen and (max-width: 800px) {
+    .main__pre {
+      flex-basis: initial; } }
 
 .main__content {
   display: flex;
@@ -49,35 +71,72 @@ body {
     display: flex;
     align-items: center;
     height: 20vh; }
+    @media only screen and (max-width: 800px) {
+      .main__content--logobox {
+        height: 14vh;
+        margin-bottom: 23.5rem;
+        margin-left: 4rem; } }
   .main__content--header {
     height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
+    @media only screen and (max-width: 800px) {
+      .main__content--header {
+        align-items: center;
+        text-align: center; } }
     .main__content--header-title {
       font-size: 4.9rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.65rem; }
+      @media only screen and (max-width: 800px) {
+        .main__content--header-title {
+          display: flex;
+          text-align: center;
+          font-size: 3.2rem;
+          padding-left: 1.2rem;
+          padding-right: 1.2rem; } }
       .main__content--header-title-pre {
         font-weight: 300;
         letter-spacing: 0.75rem;
         color: var(--color-soft-red); }
+      @media only screen and (min-width: 1680px) {
+        .main__content--header-title-mid {
+          display: block; } }
+      @media only screen and (min-width: 1680px) {
+        .main__content--header-title-post {
+          display: block; } }
     .main__content--header-caption {
       width: 85%;
       font-size: 1.18rem;
       line-height: 1.7rem;
       color: var(--color-soft-red); }
+      @media only screen and (max-width: 800px) {
+        .main__content--header-caption {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          font-size: 1rem; } }
   .main__content--input-cta {
     position: relative; }
+    @media only screen and (max-width: 800px) {
+      .main__content--input-cta {
+        text-align: center; } }
   .main__content--footer {
     display: flex;
     min-height: 10vh;
     align-items: flex-end;
     padding-bottom: 1.15rem; }
+    @media only screen and (max-width: 800px) {
+      .main__content--footer {
+        justify-content: center; } }
     .main__content--footer .attribution {
       font-size: .7rem;
       text-align: center; }
+      @media only screen and (max-width: 800px) {
+        .main__content--footer .attribution--self {
+          display: block;
+          line-height: 1.3rem; } }
     .main__content--footer .attribution a {
       text-decoration: none;
       color: #3e52a3; }
@@ -86,7 +145,7 @@ body {
   flex-basis: 14vw; }
 
 .input-box {
-  width: 65%;
+  min-width: 65%;
   padding: 0.958rem;
   border-radius: 6.25rem;
   border: 1px solid var(--color-deep-red);
@@ -102,6 +161,10 @@ body {
       background-image: url(../images/icon-error.svg);
       background-repeat: no-repeat;
       background-position: 73.5%; }
+  .input-box:placeholder-shown ~ .requirements {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
 
 .btn-inline {
   padding: 0.79rem;
@@ -113,6 +176,9 @@ body {
   border: none;
   outline: none;
   background: var(--gradient-2); }
+  @media only screen and (max-width: 800px) {
+    .btn-inline {
+      left: 67%; } }
   .btn-inline::before {
     content: url(../images/icon-arrow.svg); }
   .btn-inline:hover {
@@ -126,8 +192,3 @@ body {
   margin-left: 1rem;
   margin-top: .5rem;
   transition: all .3s; }
-
-.input-box:placeholder-shown ~ .requirements {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem); }

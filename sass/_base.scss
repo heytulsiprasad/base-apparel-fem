@@ -7,6 +7,10 @@
     --gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
+$bp-largest: 1680px;
+$bp-large: 800px;
+$bp-small: 470px;
+
 * {
     padding: 0;
     margin: 0;
@@ -26,4 +30,5 @@ html {
 body {
     font-family: "Josefin Sans", sans-serif;
     background-image: var(--gradient-1);
+    overflow-x: hidden;
 }
