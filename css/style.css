@@ -184,16 +184,20 @@ body {
     color: var(--color-deep-red);
     opacity: 0.6;
     font-size: 1rem; }
+  .input-box:placeholder-shown ~ .requirements {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem); }
   .input-box:focus {
     border: 1.8px solid var(--color-soft-red); }
     .input-box:focus:invalid {
       background-image: url(../images/icon-error.svg);
       background-repeat: no-repeat;
       background-position: 73.5%; }
-  .input-box:placeholder-shown ~ .requirements {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem); }
+    .input-box:focus:valid ~ .requirements {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-2rem); }
 
 .btn-inline {
   padding: 0.79rem;
