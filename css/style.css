@@ -45,7 +45,11 @@ body {
 
 .main {
   display: flex;
-  flex-basis: 65vw; }
+  flex-basis: 65vw;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
   @media only screen and (max-width: 830px) {
     .main {
       flex-direction: column; } }
