@@ -34,6 +34,16 @@
                 margin-bottom: 23.5rem;
                 margin-left: 4rem;
             }
+
+            @media only screen and (max-height: $bp-medium-ht) {
+                height: 27vh;
+                margin-bottom: 27rem;
+            }
+
+            @media only screen and (min-height: $bp-large-ht) and (max-width: $bp-large) {
+                height: 12vh;
+                margin-bottom: 18rem;
+            }
         }
 
         &--header {
@@ -62,6 +72,14 @@
                     padding-right: 1.2rem;
                 }
 
+                @media only screen and (max-width: $bp-smallest) {
+                    font-size: 2.5rem;
+                }
+
+                @media only screen and (max-height: $bp-medium-ht) {
+                    margin-bottom: 2rem;
+                }
+
                 &-pre {
                     font-weight: 300;
                     letter-spacing: 0.75rem;
@@ -70,6 +88,10 @@
 
                 &-mid {
                     @media only screen and (min-width: $bp-largest) {
+                        display: block;
+                    }
+
+                    @media only screen and (max-width: $bp-large) {
                         display: block;
                     }
                 }
@@ -92,11 +114,17 @@
                     padding-right: 1rem;
                     font-size: 1rem;
                 }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    font-size: .9rem;
+                }
             }
         }
 
         &--input {
-
+            @media only screen and (max-height: $bp-medium-ht) {
+                margin-top: 5rem;
+            }
 
             &-cta {
                 position: relative;
@@ -116,6 +144,10 @@
 
             @media only screen and (max-width: $bp-large) {
                 justify-content: center;
+            }
+
+            @media only screen and (max-height: $bp-medium-ht) {
+                margin-top: 3rem;
             }
 
             .attribution {

@@ -13,9 +13,13 @@
     @media only screen and (max-width: $bp-large) {
         position: absolute;
         width: 100vw;
-        top: 9rem;
+        top: 7rem;
         flex-basis: auto;
         height: 20rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        top: 5rem;
     }
 }
 
